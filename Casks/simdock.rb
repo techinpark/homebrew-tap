@@ -1,6 +1,6 @@
 cask "simdock" do
-  version "1.0.0"
-  sha256 "e4d6943f39ea1a22b09abf656c3c15665e3cbafb3059a27a0253dca4defdc793"
+  version "1.1.0"
+  sha256 "37618b69c39332a9f8901efc570562ed9aac614b490e6306c263647d2eff9a78"
 
   url "https://github.com/techinpark/SimDock/releases/download/v#{version}/SimDock.dmg"
   name "SimDock"
