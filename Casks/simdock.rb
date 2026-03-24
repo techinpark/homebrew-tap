@@ -1,6 +1,6 @@
 cask "simdock" do
-  version "1.1.0"
-  sha256 "37618b69c39332a9f8901efc570562ed9aac614b490e6306c263647d2eff9a78"
+  version "1.2.0"
+  sha256 "0ed0a86600aa479efc322b1385ee40bffbdc3b1fd272eda973676ee2e318d770"
 
   url "https://github.com/techinpark/SimDock/releases/download/v#{version}/SimDock.dmg"
   name "SimDock"
@@ -10,6 +10,6 @@ cask "simdock" do
   app "SimDock.app"
 
   zap trash: [
-    "~/Library/Preferences/kr.fernando.SimDock.plist",
+    "~/Library/Preferences/com.tmsae.SimDock.plist",
   ]
 end
