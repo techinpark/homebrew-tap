@@ -5,21 +5,21 @@
 class GaCli < Formula
   desc "Google Analytics 4 CLI tool — query DAU, events, countries, platforms, and realtime data from the terminal"
   homepage "https://github.com/techinpark/ga-cli"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/techinpark/ga-cli/releases/download/v0.2.0/ga-cli_0.2.0_darwin_amd64.tar.gz"
-      sha256 "2d3fd240c3ec28475d20edbe5c7743bb4e3e6ae8bb59ced3b53ad7fd6792a8e8"
+      url "https://github.com/techinpark/ga-cli/releases/download/v0.3.0/ga-cli_0.3.0_darwin_amd64.tar.gz"
+      sha256 "07279682b40c022ccc8f2446fe3c5b3f36f1aa8cf7d6c6607ad5b0d63d6b3c3f"
 
       define_method(:install) do
         bin.install "ga-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/techinpark/ga-cli/releases/download/v0.2.0/ga-cli_0.2.0_darwin_arm64.tar.gz"
-      sha256 "bc8188c3c599b6db49d2cfbff10f7495ca7076f8ee7713261eee5afc24c0666a"
+      url "https://github.com/techinpark/ga-cli/releases/download/v0.3.0/ga-cli_0.3.0_darwin_arm64.tar.gz"
+      sha256 "91a937efba763f5f90dd932db1ebbf61c3587220e7747c476a37b7da7268b64c"
 
       define_method(:install) do
         bin.install "ga-cli"
@@ -29,15 +29,15 @@ class GaCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techinpark/ga-cli/releases/download/v0.2.0/ga-cli_0.2.0_linux_amd64.tar.gz"
-      sha256 "9b1fbfb59c44c92657becb8b370569d2c9d6a70038e390deee713a1b36c29dc9"
+      url "https://github.com/techinpark/ga-cli/releases/download/v0.3.0/ga-cli_0.3.0_linux_amd64.tar.gz"
+      sha256 "78b263776e223ea6ad3311e05b083e4ec57bc3aca3e0f917c0f2a01c515be483"
       define_method(:install) do
         bin.install "ga-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techinpark/ga-cli/releases/download/v0.2.0/ga-cli_0.2.0_linux_arm64.tar.gz"
-      sha256 "cf18a60ea4e73977b003619770bf7164334668c6c723168dd4cfbdd09898b066"
+      url "https://github.com/techinpark/ga-cli/releases/download/v0.3.0/ga-cli_0.3.0_linux_arm64.tar.gz"
+      sha256 "a7f9e715e385dab99665cc452bd15fdf357047cba785b59084b1315122f42b04"
       define_method(:install) do
         bin.install "ga-cli"
       end
