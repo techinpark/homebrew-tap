@@ -8,10 +8,11 @@ class JiraCloudCli < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./main.go"
+    system "go", "build", "-ldflags=-s -w", "-o", "jira-cloud-cli", "./main.go"
+    bin.install "jira-cloud-cli"
   end
 
   test do
-    assert_match "Jira CLI for Jira Cloud REST API v3", shell_output("#{bin}/jira --help")
+    assert_match "Jira CLI for Jira Cloud REST API v3", shell_output("#{bin}/jira-cloud-cli --help")
   end
 end
