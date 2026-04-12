@@ -1,4 +1,4 @@
-class JiraCli < Formula
+class JiraCloudCli < Formula
   desc "Open source Jira CLI for Jira Cloud REST API v3"
   homepage "https://github.com/techinpark/jira-cli"
   url "https://github.com/techinpark/jira-cli/releases/download/v0.1.0/jira-cli_0.1.0_source.tar.gz"
