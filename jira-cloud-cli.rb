@@ -5,12 +5,12 @@
 class JiraCloudCli < Formula
   desc "Jira CLI for Jira Cloud REST API v3"
   homepage "https://github.com/techinpark/jira-cli"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/techinpark/jira-cli/releases/download/v0.2.0/jira-cli_0.2.0_darwin_amd64.tar.gz"
-      sha256 "52fd80fbff1324208c9982d5198c2ce63528428c8fabb665489f3041af99dd45"
+      url "https://github.com/techinpark/jira-cli/releases/download/v0.3.0/jira-cli_0.3.0_darwin_amd64.tar.gz"
+      sha256 "84e7dfe25bc5aad9471cefaf77a5365b02bceab4924b8a0aef3bf3296408aa10"
 
       define_method(:install) do
         system "go", "build", "-o", "jira-cloud-cli", "./main.go"
@@ -18,8 +18,8 @@ class JiraCloudCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/techinpark/jira-cli/releases/download/v0.2.0/jira-cli_0.2.0_darwin_arm64.tar.gz"
-      sha256 "24828177f535d3fd3635132b09554533af4aec7635bd6aaa69ccc8fb953a4410"
+      url "https://github.com/techinpark/jira-cli/releases/download/v0.3.0/jira-cli_0.3.0_darwin_arm64.tar.gz"
+      sha256 "892de02d63bfdc5242b041e6a5f4fdf6310ac073741d146bd91e58a68db13734"
 
       define_method(:install) do
         system "go", "build", "-o", "jira-cloud-cli", "./main.go"
@@ -30,16 +30,16 @@ class JiraCloudCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techinpark/jira-cli/releases/download/v0.2.0/jira-cli_0.2.0_linux_amd64.tar.gz"
-      sha256 "cf18da3782df996610e2bc64b9e79b30f1db588fa70eada228c4b7661ba9090e"
+      url "https://github.com/techinpark/jira-cli/releases/download/v0.3.0/jira-cli_0.3.0_linux_amd64.tar.gz"
+      sha256 "29abc091de55f7842043ccb258fd265ecf8b8e0a28c2bb722e19e935e50b5b70"
       define_method(:install) do
         system "go", "build", "-o", "jira-cloud-cli", "./main.go"
         bin.install "jira-cloud-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/techinpark/jira-cli/releases/download/v0.2.0/jira-cli_0.2.0_linux_arm64.tar.gz"
-      sha256 "f27c4815fc8d57320bdf3526e1734a645aec92c3e5f218a95baa8ba980580369"
+      url "https://github.com/techinpark/jira-cli/releases/download/v0.3.0/jira-cli_0.3.0_linux_arm64.tar.gz"
+      sha256 "574effe6c1a7915bfc3675c01616e07b02e66a282d61154958164097e1a073c7"
       define_method(:install) do
         system "go", "build", "-o", "jira-cloud-cli", "./main.go"
         bin.install "jira-cloud-cli"
